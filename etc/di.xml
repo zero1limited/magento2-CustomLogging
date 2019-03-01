@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Psr\Log\LoggerInterface" type="Zero1\CustomLogging\Logger\Monolog" />
+
+    <virtualType name="productionDefaultLogger" type="\Monolog\Handler\StreamHandler">
+        <arguments>
+            <argument name="stream" xsi:type="string">../var/log/system.log</argument>
+            <argument name="level" xsi:type="const">Monolog\Logger::ERROR</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="nonProductionDefaultLogger" type="\Monolog\Handler\StreamHandler">
+        <arguments>
+            <argument name="stream" xsi:type="string">../var/log/system.log</argument>
+            <argument name="level" xsi:type="const">Monolog\Logger::INFO</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="nonProductionDebugLogger" type="\Monolog\Handler\StreamHandler">
+        <arguments>
+            <argument name="stream" xsi:type="string">../var/log/debug.log</argument>
+            <argument name="level" xsi:type="const">Monolog\Logger::DEBUG</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="loggingLineFormatter" type="\Monolog\Formatter\LineFormatter">
+        <arguments>
+            <argument name="allowInlineLineBreaks" xsi:type="boolean">1</argument>
+        </arguments>
+    </virtualType>
+</config>
