@@ -1,6 +1,6 @@
 {
     "name": "zero1\/module-custom-logging",
-    "description": "N\/A",
+    "description": "Allows you to configure different logging 'stacks' on a per environment basis. This would allow you to have a logging level of DEBUG on non_production and ERROR on production.",
     "require": {
         "php": "~5.5.0|~5.6.0|^7.0.0",
         "magento\/product-community-edition": "^2.0.0"
