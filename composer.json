@@ -10,6 +10,20 @@
     "license": [
         "proprietary"
     ],
+    "keywords": [
+        "Magento 2",
+        "Magento",
+        "Logging",
+        "Logs"
+    ],
+    "homepage": "https://packagist.org/packages/zero1/magento2-CustomLogging",
+    "support": {
+        "email": "support@zero1.co.uk",
+        "docs": "https://github.com/zero1limited/magento2-CustomLogging"
+    },
+    "suggest": {
+        "mdoq/module-connector": "Improves DevOps for Magento2"
+    },
     "autoload": {
         "files": [
             "registration.php"
