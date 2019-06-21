@@ -1,6 +1,9 @@
 # magento2-CustomLogging
 Allows configurable logging
-
+  
+To setup you will need to add the following snippets to the appropriate files.  
+On you production sites make sure you change the `stack` value to `production`.  
+In addition to this if you are running multiple webheads you can the `hardware_instance` value to identify each web head. eg `admin-01`, `web-asg-01` this will then be added to the logs.
 
 ## env.php Config Example
 ```php
